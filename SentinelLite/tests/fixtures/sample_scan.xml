@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- ===========================================================================
+     SYNTHETIC SAMPLE REPORT - NOT A REAL SCAN RESULT.
+     Hand-written in Nmap's XML format so SentinelLite can be demonstrated without
+     scanning anything. Hosts: 127.0.0.1 (localhost) and private lab addresses.
+     To use real data, scan ONLY localhost or a lab machine you own / are authorised to test:
+         nmap -sV -oX my_scan.xml 127.0.0.1
+     ============================================================================ -->
+<nmaprun scanner="nmap" args="nmap -sV -oX sample_scan.xml (synthetic sample)" start="1792404720" startstr="Mon Oct 19 10:12:00 2026" version="7.94" xmloutputversion="1.05">
+  <scaninfo type="connect" protocol="tcp" numservices="1000" services="1-1000"/>
+  <host starttime="1792404720" endtime="1792404734">
+    <status state="up" reason="localhost-response" reason_ttl="0"/>
+    <address addr="127.0.0.1" addrtype="ipv4"/>
+    <hostnames><hostname name="localhost" type="user"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="9.6" method="probed" conf="10"/></port>
+      <port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="nginx" version="1.24" method="probed" conf="10"/></port>
+      <port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" product="nginx" version="1.24" method="probed" conf="10"/></port>
+      <port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" product="MySQL" version="8.0" method="probed" conf="10"/></port>
+      <port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http-proxy" product="" version="" method="probed" conf="10"/></port>
+      <port protocol="tcp" portid="23"><state state="closed" reason="syn-ack" reason_ttl="64"/><service name="telnet" product="" version="" method="probed" conf="10"/></port>
+    </ports>
+  </host>
+  <host starttime="1792404720" endtime="1792404734">
+    <status state="up" reason="arp-response" reason_ttl="0"/>
+    <address addr="192.168.56.10" addrtype="ipv4"/>
+    <hostnames><hostname name="lab-vm-1" type="user"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="8.9" method="probed" conf="10"/></port>
+      <port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="microsoft-ds" product="" version="" method="probed" conf="10"/></port>
+      <port protocol="tcp" portid="5900"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="vnc" product="VNC" version="" method="probed" conf="10"/></port>
+    </ports>
+  </host>
+  <host starttime="1792404720" endtime="1792404734">
+    <status state="down" reason="no-response" reason_ttl="0"/>
+    <address addr="192.168.56.20" addrtype="ipv4"/>
+  </host>
+  <runstats><finished time="1792404734" timestr="Mon Oct 19 10:12:14 2026" elapsed="14.00" summary="Synthetic sample" exit="success"/><hosts up="2" down="1" total="3"/></runstats>
+</nmaprun>

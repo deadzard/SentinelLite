@@ -1,0 +1,10 @@
+# SentinelLite expected-port policy (allow-list) - EDIT ME
+# Format:   HOST   PORT/PROTOCOL        ('*' matches every host; ranges like 8000-8010/tcp are allowed)
+# Anything open that is NOT listed for that host is reported as PORT-UNEXPECTED.
+# A host with no rules at all has no approved ports.
+
+127.0.0.1       22/tcp    # SSH for administration
+127.0.0.1       80/tcp    # web server
+127.0.0.1       443/tcp   # web server (TLS)
+
+192.168.56.10   22/tcp    # lab VM: SSH only

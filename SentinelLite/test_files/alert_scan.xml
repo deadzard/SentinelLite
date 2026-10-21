@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<!-- SYNTHETIC EXAMPLE (hand-written in Nmap's format). To make a real one: nmap -sV -oX my_scan.xml 127.0.0.1 -->
+<nmaprun scanner="nmap" start="1792504800" version="7.94">
+  <host>
+    <status state="up"/>
+    <address addr="127.0.0.1" addrtype="ipv4"/>
+    <hostnames><hostname name="localhost" type="user"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="22"><state state="open"/><service name="ssh" product="OpenSSH" version="9.6"/></port>
+      <port protocol="tcp" portid="80"><state state="open"/><service name="http" product="nginx"/></port>
+      <port protocol="tcp" portid="3389"><state state="open"/><service name="ms-wbt-server"/></port>
+      <port protocol="tcp" portid="21"><state state="open"/><service name="ftp"/></port>
+    </ports>
+  </host>
+</nmaprun>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<!-- SYNTHETIC EXAMPLE: only ports 22, 80 and 443 are open on localhost, all allowed by the default policy. -->
+<nmaprun scanner="nmap" start="1792504800" version="7.94">
+  <host>
+    <status state="up"/>
+    <address addr="127.0.0.1" addrtype="ipv4"/>
+    <hostnames><hostname name="localhost" type="user"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="22"><state state="open"/><service name="ssh" product="OpenSSH" version="9.6"/></port>
+      <port protocol="tcp" portid="80"><state state="open"/><service name="http" product="nginx"/></port>
+      <port protocol="tcp" portid="443"><state state="open"/><service name="https" product="nginx"/></port>
+    </ports>
+  </host>
+</nmaprun>
